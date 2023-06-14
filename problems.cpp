@@ -34,6 +34,15 @@ int main()
 // Sample Array : [1,1,1,1,2,2,3,3,3,3,4,5]
 // Unique Array : [1, 2, 3, 4, 5]
 
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr1[5];
+    cout<<"Enter numbers:";
+    cin>>
+}
+
 // Q#3
 // Write a function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
 // Note:A pangram is a sentence containing every letter of the alphabet.
