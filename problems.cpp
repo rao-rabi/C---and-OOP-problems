@@ -6,7 +6,6 @@
 // has_33([3, 1, 3]) → False
 // has_33([3,3,1]) → True
 
-
 #include <iostream>
 using namespace std;
 
@@ -34,13 +33,16 @@ int main()
 // Sample Array : [1,1,1,1,2,2,3,3,3,3,4,5]
 // Unique Array : [1, 2, 3, 4, 5]
 
-
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     int arr1[5];
-    cout<<"Enter numbers:";
-    cin>>
+    cout << "Enter an array:";
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> arr1[i];
+    }
 }
 
 // Q#3
