@@ -6,26 +6,26 @@
 // has_33([3, 1, 3]) → False
 // has_33([3,3,1]) → True
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main()
-{
-    int arr[] = {1, 3, 3, 4, 3, 7};
-    int size = sizeof(arr);
+// int main()
+// {
+//     int arr[] = {1, 3, 3, 4, 3, 7};
+//     int size = sizeof(arr);
 
-    for (int i = 0; i < size - 1; i++)
-    {
-        if (arr[i] == 3 && arr[i + 1] == 3)
-        {
-            cout << true << endl;
-            return 0;
-        }
-    }
+//     for (int i = 0; i < size - 1; i++)
+//     {
+//         if (arr[i] == 3 && arr[i + 1] == 3)
+//         {
+//             cout << true << endl;
+//             return 0;
+//         }
+//     }
 
-    cout << false << endl;
-    return 0;
-}
+//     cout << false << endl;
+//     return 0;
+// }
 
 // Q#2
 // Write a function that takes an array and returns a new list with unique elements of the first list.
@@ -37,12 +37,25 @@ int main()
 using namespace std;
 int main()
 {
-    int arr1[5];
-    cout << "Enter an array:";
-    for (int i = 0; i < 5; i++)
+    int arr1[] = {1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5};
+    // int size1 = sizeof(arr1);
+    for (int i = 0; i < 12; i++)
     {
-        cin >> arr1[i];
+        bool isDuplicate = false;
+        for (int j = 0; j < i; j++)
+        {
+            if (arr1[i] == arr1[j])
+            {
+                isDuplicate = true;
+                break;
+            };
+        }
+        if (!isDuplicate)
+        {
+            cout << arr1[i] << " ";
+        }
     }
+    return 0;
 }
 
 // Q#3
