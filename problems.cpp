@@ -145,6 +145,39 @@ int main()
 // animal_crackers('Crazy Chocolate') --> True
 // animal_crackers('Lazy Dog') --> False
 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int a;
+    string str;
+    cout << "Enter a string: " << endl;
+    getline(cin, str);
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (str[i] == ' ')
+        {
+            str[i + 1];
+        }
+    }
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (str[0] == str[i + 1])
+        {
+            a = 1;
+        }
+    }
+    if (a == 1)
+    {
+        cout << "true";
+    }
+    else
+    {
+        cout << "fasle";
+    }
+}
+
 // Q#6
 // Given an input by the user in the form of a positive integer, the program should print out a triangle-shaped pattern made of the star character (*). The input should be stored in a variable called N. N represents the number of rows in the pattern. The number of stars in each row increases by 2 each time.
 // Desired output:
