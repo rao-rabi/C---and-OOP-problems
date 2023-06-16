@@ -6,26 +6,26 @@
 // has_33([3, 1, 3]) → False
 // has_33([3,3,1]) → True
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main()
-// {
-//     int arr[] = {1, 3, 3, 4, 3, 7};
-//     int size = sizeof(arr);
+int main()
+{
+    int arr[] = {1, 3, 3, 4, 3, 7};
+    int size = sizeof(arr);
 
-//     for (int i = 0; i < size - 1; i++)
-//     {
-//         if (arr[i] == 3 && arr[i + 1] == 3)
-//         {
-//             cout << true << endl;
-//             return 0;
-//         }
-//     }
+    for (int i = 0; i < size - 1; i++)
+    {
+        if (arr[i] == 3 && arr[i + 1] == 3)
+        {
+            cout << true << endl;
+            return 0;
+        }
+    }
 
-//     cout << false << endl;
-//     return 0;
-// }
+    cout << false << endl;
+    return 0;
+}
 
 // Q#2
 // Write a function that takes an array and returns a new list with unique elements of the first list.
@@ -63,6 +63,39 @@ int main()
 // Note:A pangram is a sentence containing every letter of the alphabet.
 // Example:
 // A quick brown fox jumps over the lazy dog.
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int count = 0;
+    string s = "abcdefghijklmnopqrstuvwxyz";
+    string str;
+    cout << "Enter the string: ";
+    getline(cin, str);
+    for (int i = 0; i < str.length(); i++)
+    {
+        for (int j = 0; j < s.length(); j++)
+        {
+            if (str[i] == s[j])
+            {
+                count = count + 1;
+                s[j] = 0;
+            }
+        }
+    }
+    if (count == 26)
+    {
+        cout << str << " is a pangram";
+    }
+    else if (count < 26)
+    {
+        cout << str << " is not a pangram";
+    }
+    else
+        cout << "invalid";
+}
 
 // Q#4
 // LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd.
