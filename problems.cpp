@@ -104,6 +104,42 @@ int main()
 // lesser_of_two_evens(2,3)---> 3
 // lesser_of_two_evens(3,4)---> 4
 
+#include <iostream>
+using namespace std;
+int main()
+{
+	int num1,num2;
+	cout<<"Enter the number 1 : ";
+	cin>>num1;
+	cout<<"Enter the number 2 : ";
+	cin>>num2;
+	{
+	    if(num1%2==0 && num2%2==0)
+			{
+				cout<<"Leser of two evens = ";
+				if(num1<num2)
+				{
+					cout<<num1;
+				}
+				else 
+				cout<<num2;
+				cout<<endl;
+			}
+		else{
+			cout<<"Greater of two numbers is:";
+			if(num1<num2)
+			{
+				cout<<num2;
+			}
+			else
+			{
+				cout<<num1;
+			}
+		}
+		return 0;
+	}
+}
+
 // Q#5
 // Write a function takes a two-word string and returns True if both words begin with same letter
 // animal_crackers('Crazy Chocolate') --> True
