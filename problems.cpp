@@ -108,36 +108,37 @@ int main()
 using namespace std;
 int main()
 {
-	int num1,num2;
-	cout<<"Enter the number 1 : ";
-	cin>>num1;
-	cout<<"Enter the number 2 : ";
-	cin>>num2;
-	{
-	    if(num1%2==0 && num2%2==0)
-			{
-				cout<<"Leser of two evens = ";
-				if(num1<num2)
-				{
-					cout<<num1;
-				}
-				else 
-				cout<<num2;
-				cout<<endl;
-			}
-		else{
-			cout<<"Greater of two numbers is:";
-			if(num1<num2)
-			{
-				cout<<num2;
-			}
-			else
-			{
-				cout<<num1;
-			}
-		}
-		return 0;
-	}
+    int num1, num2;
+    cout << "Enter the number 1 : ";
+    cin >> num1;
+    cout << "Enter the number 2 : ";
+    cin >> num2;
+    {
+        if (num1 % 2 == 0 && num2 % 2 == 0)
+        {
+            cout << "Leser of two evens = ";
+            if (num1 < num2)
+            {
+                cout << num1;
+            }
+            else
+                cout << num2;
+            cout << endl;
+        }
+        else
+        {
+            cout << "Greater of two numbers is:";
+            if (num1 < num2)
+            {
+                cout << num2;
+            }
+            else
+            {
+                cout << num1;
+            }
+        }
+        return 0;
+    }
 }
 
 // Q#5
@@ -187,19 +188,20 @@ int main()
 // ***
 // *****
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-   int rows,i,j,space;
-   cout<<"Enter number of rows:"<<endl;
-   cin>>rows;
-   for(int i=1;i<=rows;i++)
+int main()
+{
+    int rows, i, j, space;
+    cout << "Enter number of rows:" << endl;
+    cin >> rows;
+    for (int i = 1; i <= rows; i++)
     {
-   	        for(j=1;j<=2*i-1;j++)
-   	    	cout<<"*";
-   	    	cout<<endl;
-	} 
-	return 0;
+        for (j = 1; j <= 2 * i - 1; j++)
+            cout << "*";
+        cout << endl;
+    }
+    return 0;
 }
 
 // Q#7
@@ -211,31 +213,48 @@ int main(){
 // with seed values
 // F0 = 0 and F1 = 1
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-	int n,f1=0,f2=1,sum;
-	cout<<"Enter a number: ";
-	cin>>n;
-	cout<<"Fibonacci series is..."<<endl;;
-	for(int i=0;i<n;i++)
-	{
-		if(i<=1)
-		sum=i;
-		
-		else
-		sum=f1+f2;
-		f1=f2;
-		f2=sum;
-		
-		cout<<sum<<" ";
-	}
+int main()
+{
+    int n, f1 = 0, f2 = 1, sum;
+    cout << "Enter a number: ";
+    cin >> n;
+    cout << "Fibonacci series is..." << endl;
+    ;
+    for (int i = 0; i < n; i++)
+    {
+        if (i <= 1)
+            sum = i;
+
+        else
+            sum = f1 + f2;
+        f1 = f2;
+        f2 = sum;
+
+        cout << sum << " ";
+    }
 }
 
 // Q#8
 // Write a program to find the sum of squares of first 'n' natural numbers.
 // Input : N = 4
 // Output : 30
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, sum = 0, j;
+    cout << "Enter a number: ";
+    cin >> n;
+    for (int i = 0; i <= n; i++)
+    {
+        sum = sum + (i * i);
+    }
+    cout << "Sum=" << sum;
+    return 0;
+}
 
 // Q#9
 // Write a program to find how many times substring “Emma” appears in the given string.
