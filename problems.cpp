@@ -1,260 +1,260 @@
-// Q#1
-// Given an array of integers, return True if the array contains a 3 next to a 3 somewhere.
-// Desired output:
-// has_33([1, 3, 3]) → True
-// has_33([1, 3, 1, 3]) → False
-// has_33([3, 1, 3]) → False
-// has_33([3,3,1]) → True
+// // Q#1
+// // Given an array of integers, return True if the array contains a 3 next to a 3 somewhere.
+// // Desired output:
+// // has_33([1, 3, 3]) → True
+// // has_33([1, 3, 1, 3]) → False
+// // has_33([3, 1, 3]) → False
+// // has_33([3,3,1]) → True
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main()
-{
-    int arr[] = {1, 3, 3, 4, 3, 7};
-    int size = sizeof(arr);
+// int main()
+// {
+//     int arr[] = {1, 3, 3, 4, 3, 7};
+//     int size = sizeof(arr);
 
-    for (int i = 0; i < size - 1; i++)
-    {
-        if (arr[i] == 3 && arr[i + 1] == 3)
-        {
-            cout << true << endl;
-            return 0;
-        }
-    }
+//     for (int i = 0; i < size - 1; i++)
+//     {
+//         if (arr[i] == 3 && arr[i + 1] == 3)
+//         {
+//             cout << true << endl;
+//             return 0;
+//         }
+//     }
 
-    cout << false << endl;
-    return 0;
-}
+//     cout << false << endl;
+//     return 0;
+// }
 
-// Q#2
-// Write a function that takes an array and returns a new list with unique elements of the first list.
-// Desired output:
-// Sample Array : [1,1,1,1,2,2,3,3,3,3,4,5]
-// Unique Array : [1, 2, 3, 4, 5]
+// // Q#2
+// // Write a function that takes an array and returns a new list with unique elements of the first list.
+// // Desired output:
+// // Sample Array : [1,1,1,1,2,2,3,3,3,3,4,5]
+// // Unique Array : [1, 2, 3, 4, 5]
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    int arr1[] = {1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5};
-    // int size1 = sizeof(arr1);
-    for (int i = 0; i < 12; i++)
-    {
-        bool isDuplicate = false;
-        for (int j = 0; j < i; j++)
-        {
-            if (arr1[i] == arr1[j])
-            {
-                isDuplicate = true;
-                break;
-            };
-        }
-        if (!isDuplicate)
-        {
-            cout << arr1[i] << " ";
-        }
-    }
-    return 0;
-}
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr1[] = {1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5};
+//     // int size1 = sizeof(arr1);
+//     for (int i = 0; i < 12; i++)
+//     {
+//         bool isDuplicate = false;
+//         for (int j = 0; j < i; j++)
+//         {
+//             if (arr1[i] == arr1[j])
+//             {
+//                 isDuplicate = true;
+//                 break;
+//             };
+//         }
+//         if (!isDuplicate)
+//         {
+//             cout << arr1[i] << " ";
+//         }
+//     }
+//     return 0;
+// }
 
-// Q#3
-// Write a function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
-// Note:A pangram is a sentence containing every letter of the alphabet.
-// Example:
-// A quick brown fox jumps over the lazy dog.
+// // Q#3
+// // Write a function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
+// // Note:A pangram is a sentence containing every letter of the alphabet.
+// // Example:
+// // A quick brown fox jumps over the lazy dog.
 
-#include <iostream>
-#include <string>
-using namespace std;
-int main()
-{
-    int count = 0;
-    string s = "abcdefghijklmnopqrstuvwxyz";
-    string str;
-    cout << "Enter the string: ";
-    getline(cin, str);
-    for (int i = 0; i < str.length(); i++)
-    {
-        for (int j = 0; j < s.length(); j++)
-        {
-            if (str[i] == s[j])
-            {
-                count = count + 1;
-                s[j] = 0;
-            }
-        }
-    }
-    if (count == 26)
-    {
-        cout << str << " is a pangram";
-    }
-    else if (count < 26)
-    {
-        cout << str << " is not a pangram";
-    }
-    else
-        cout << "invalid";
-}
+// #include <iostream>
+// #include <string>
+// using namespace std;
+// int main()
+// {
+//     int count = 0;
+//     string s = "abcdefghijklmnopqrstuvwxyz";
+//     string str;
+//     cout << "Enter the string: ";
+//     getline(cin, str);
+//     for (int i = 0; i < str.length(); i++)
+//     {
+//         for (int j = 0; j < s.length(); j++)
+//         {
+//             if (str[i] == s[j])
+//             {
+//                 count = count + 1;
+//                 s[j] = 0;
+//             }
+//         }
+//     }
+//     if (count == 26)
+//     {
+//         cout << str << " is a pangram";
+//     }
+//     else if (count < 26)
+//     {
+//         cout << str << " is not a pangram";
+//     }
+//     else
+//         cout << "invalid";
+// }
 
-// Q#4
-// LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd.
-// Desired output:
-// lesser_of_two_evens(2,4)---> 2
-// lesser_of_two_evens(2,3)---> 3
-// lesser_of_two_evens(3,4)---> 4
+// // Q#4
+// // LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd.
+// // Desired output:
+// // lesser_of_two_evens(2,4)---> 2
+// // lesser_of_two_evens(2,3)---> 3
+// // lesser_of_two_evens(3,4)---> 4
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    int num1, num2;
-    cout << "Enter the number 1 : ";
-    cin >> num1;
-    cout << "Enter the number 2 : ";
-    cin >> num2;
-    {
-        if (num1 % 2 == 0 && num2 % 2 == 0)
-        {
-            cout << "Leser of two evens = ";
-            if (num1 < num2)
-            {
-                cout << num1;
-            }
-            else
-                cout << num2;
-            cout << endl;
-        }
-        else
-        {
-            cout << "Greater of two numbers is:";
-            if (num1 < num2)
-            {
-                cout << num2;
-            }
-            else
-            {
-                cout << num1;
-            }
-        }
-        return 0;
-    }
-}
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int num1, num2;
+//     cout << "Enter the number 1 : ";
+//     cin >> num1;
+//     cout << "Enter the number 2 : ";
+//     cin >> num2;
+//     {
+//         if (num1 % 2 == 0 && num2 % 2 == 0)
+//         {
+//             cout << "Leser of two evens = ";
+//             if (num1 < num2)
+//             {
+//                 cout << num1;
+//             }
+//             else
+//                 cout << num2;
+//             cout << endl;
+//         }
+//         else
+//         {
+//             cout << "Greater of two numbers is:";
+//             if (num1 < num2)
+//             {
+//                 cout << num2;
+//             }
+//             else
+//             {
+//                 cout << num1;
+//             }
+//         }
+//         return 0;
+//     }
+// }
 
-// Q#5
-// Write a function takes a two-word string and returns True if both words begin with same letter
-// animal_crackers('Crazy Chocolate') --> True
-// animal_crackers('Lazy Dog') --> False
+// // Q#5
+// // Write a function takes a two-word string and returns True if both words begin with same letter
+// // animal_crackers('Crazy Chocolate') --> True
+// // animal_crackers('Lazy Dog') --> False
 
-#include <iostream>
-#include <string>
-using namespace std;
-int main()
-{
-    int a;
-    string str;
-    cout << "Enter a string: " << endl;
-    getline(cin, str);
-    for (int i = 0; i < str.length(); i++)
-    {
-        if (str[i] == ' ')
-        {
-            str[i + 1];
-        }
-    }
-    for (int i = 0; i < str.length(); i++)
-    {
-        if (str[0] == str[i + 1])
-        {
-            a = 1;
-        }
-    }
-    if (a == 1)
-    {
-        cout << "true";
-    }
-    else
-    {
-        cout << "fasle";
-    }
-}
+// #include <iostream>
+// #include <string>
+// using namespace std;
+// int main()
+// {
+//     int a;
+//     string str;
+//     cout << "Enter a string: " << endl;
+//     getline(cin, str);
+//     for (int i = 0; i < str.length(); i++)
+//     {
+//         if (str[i] == ' ')
+//         {
+//             str[i + 1];
+//         }
+//     }
+//     for (int i = 0; i < str.length(); i++)
+//     {
+//         if (str[0] == str[i + 1])
+//         {
+//             a = 1;
+//         }
+//     }
+//     if (a == 1)
+//     {
+//         cout << "true";
+//     }
+//     else
+//     {
+//         cout << "fasle";
+//     }
+// }
 
-// Q#6
-// Given an input by the user in the form of a positive integer, the program should print out a triangle-shaped pattern made of the star character (*). The input should be stored in a variable called N. N represents the number of rows in the pattern. The number of stars in each row increases by 2 each time.
-// Desired output:
-// For example:
-// If N = 3
-// *
-// ***
-// *****
+// // Q#6
+// // Given an input by the user in the form of a positive integer, the program should print out a triangle-shaped pattern made of the star character (*). The input should be stored in a variable called N. N represents the number of rows in the pattern. The number of stars in each row increases by 2 each time.
+// // Desired output:
+// // For example:
+// // If N = 3
+// // *
+// // ***
+// // *****
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    int rows, i, j, space;
-    cout << "Enter number of rows:" << endl;
-    cin >> rows;
-    for (int i = 1; i <= rows; i++)
-    {
-        for (j = 1; j <= 2 * i - 1; j++)
-            cout << "*";
-        cout << endl;
-    }
-    return 0;
-}
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int rows, i, j, space;
+//     cout << "Enter number of rows:" << endl;
+//     cin >> rows;
+//     for (int i = 1; i <= rows; i++)
+//     {
+//         for (j = 1; j <= 2 * i - 1; j++)
+//             cout << "*";
+//         cout << endl;
+//     }
+//     return 0;
+// }
 
-// Q#7
-// Write a program to print the Fibonacci series.
-// The Fibonacci numbers are the numbers in the following integer sequence.
-// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
-// In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
-// Fn = Fn-1 + Fn-2
-// with seed values
-// F0 = 0 and F1 = 1
+// // Q#7
+// // Write a program to print the Fibonacci series.
+// // The Fibonacci numbers are the numbers in the following integer sequence.
+// // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
+// // In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
+// // Fn = Fn-1 + Fn-2
+// // with seed values
+// // F0 = 0 and F1 = 1
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    int n, f1 = 0, f2 = 1, sum;
-    cout << "Enter a number: ";
-    cin >> n;
-    cout << "Fibonacci series is..." << endl;
-    ;
-    for (int i = 0; i < n; i++)
-    {
-        if (i <= 1)
-            sum = i;
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n, f1 = 0, f2 = 1, sum;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     cout << "Fibonacci series is..." << endl;
+//     ;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (i <= 1)
+//             sum = i;
 
-        else
-            sum = f1 + f2;
-        f1 = f2;
-        f2 = sum;
+//         else
+//             sum = f1 + f2;
+//         f1 = f2;
+//         f2 = sum;
 
-        cout << sum << " ";
-    }
-}
+//         cout << sum << " ";
+//     }
+// }
 
-// Q#8
-// Write a program to find the sum of squares of first 'n' natural numbers.
-// Input : N = 4
-// Output : 30
+// // Q#8
+// // Write a program to find the sum of squares of first 'n' natural numbers.
+// // Input : N = 4
+// // Output : 30
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    int n, sum = 0, j;
-    cout << "Enter a number: ";
-    cin >> n;
-    for (int i = 0; i <= n; i++)
-    {
-        sum = sum + (i * i);
-    }
-    cout << "Sum=" << sum;
-    return 0;
-}
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n, sum = 0, j;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     for (int i = 0; i <= n; i++)
+//     {
+//         sum = sum + (i * i);
+//     }
+//     cout << "Sum=" << sum;
+//     return 0;
+// }
 
 // Q#9
 // Write a program to find how many times substring “Emma” appears in the given string.
@@ -262,6 +262,30 @@ int main()
 // str = "Emma is good developer. Emma is a writer"
 // Output:
 // Emma appeared 2 times
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int a = 0;
+    string str = "emma";
+    string str1;
+    cout << "Enter a string: ";
+    getline(cin, str1);
+    for (int i = 0; i < str1.length(); i++)
+    {
+        for (int j = 0; j < str.length(); j++)
+        {
+            if (str1[i] == str[j] && str1[i + 1] == str[j + 1] && str1[i + 2] == str[j + 2] && str1[i + 3] == str[j + 3])
+            {
+                a++;
+            }
+        }
+    }
+    cout << "emma appears " << a << " times in string." << endl;
+    return 0;
+}
 
 // Q#10
 // Write a C++ code to accept a string and count the number of vowels and consonants.
