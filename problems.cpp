@@ -291,46 +291,77 @@ int main()
 // Write a C++ code to accept a string and count the number of vowels and consonants.
 // Print them separately.
 
-// Q#11
-// Write a function in C++ that accepts a credit card number.
-// It should return a string where all the characters are hidden with an asterisk except the last four.
-// For example, if the function gets sent "4444444444444444", then it should return "4444".
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int vowels = 0;
+    string vowel;
+    string consonant;
+    int consonants = 0;
+    string str;
+    cout << "Enter a string: ";
+    getline(cin, str);
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+        {
+            vowels++;
+            vowel += str[i];
+        }
+        else if (str[i] != 'a' || str[i] != 'e' || str[i] != 'i' || str[i] != 'o' || str[i] != 'u' || str[i] != 'A' || str[i] != 'E' || str[i] != 'I' || str[i] != 'O' || str[i] != 'U')
+        {
+            consonants++;
+            consonant += str[i];
+        }
+    }
+    cout << "Number of vowels in string is : " << vowels << endl;
+    cout << "Number of consonants in string is : " << consonants << endl;
+    cout << "Vowels in string are : " << vowel << endl;
+    cout << "Consonants in string are : " << consonant << endl;
+}
 
-// Q#12
-// BLACKJACK: Given three integers between 1 and 11,
-// if their sum is less than or equal to 21, return their sum.
-// If their sum exceeds 21 and there's an eleven, reduce the total sum by 10.
-// Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
-// blackjack(5,6,7) --> 18
-// blackjack(9,9,9) --> 'BUST'
-// blackjack(9,9,11) --> 19
+    // Q#11
+    // Write a function in C++ that accepts a credit card number.
+    // It should return a string where all the characters are hidden with an asterisk except the last four.
+    // For example, if the function gets sent "4444444444444444", then it should return "4444".
 
-// Q#13
-// Write a program that prints the integers from 1 to 100.
-// But for multiples of three print "Fizz" instead of the number,
-// and for the multiples of five print "Buzz".
+    // Q#12
+    // BLACKJACK: Given three integers between 1 and 11,
+    // if their sum is less than or equal to 21, return their sum.
+    // If their sum exceeds 21 and there's an eleven, reduce the total sum by 10.
+    // Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+    // blackjack(5,6,7) --> 18
+    // blackjack(9,9,9) --> 'BUST'
+    // blackjack(9,9,11) --> 19
 
-// Q#14
-// Write a program to print the Sum of the diagnals(both) of a Matrix, using 2D Array.
+    // Q#13
+    // Write a program that prints the integers from 1 to 100.
+    // But for multiples of three print "Fizz" instead of the number,
+    // and for the multiples of five print "Buzz".
 
-// Q#15
-// Print all Strong numbers(Strong number is a special number whose sum of the factorial of digits is equal to the original number) form 1 to 150.
-// eg. 145 is a strong number,(1!+5!+5!)=145
+    // Q#14
+    // Write a program to print the Sum of the diagnals(both) of a Matrix, using 2D Array.
 
-// Q#16
-// We want to calculate the total marks of each student of a class in Physics,Chemistry and Mathematics and the average marks of the class. The number of students in the class are entered by the user. Create a class named Marks with data members for roll number, name and marks. Create three other classes inheriting the Marks class, namely Physics, Chemistry and Mathematics, which are used to define marks in individual subject of each student. Roll number of each student will be generated automatically.
+    // Q#15
+    // Print all Strong numbers(Strong number is a special number whose sum of the factorial of digits is equal to the original number) form 1 to 150.
+    // eg. 145 is a strong number,(1!+5!+5!)=145
 
-// Q#17
-// Suppose you have a Piggie Bank with an initial amount of $50 and you have to add some more amount to it. Create a class 'AddAmount' with a data member named 'amount' with an initial value of $50. Now make two constructors of this class as follows:
-// 1 - without any parameter - no amount will be added to the Piggie Bank
-// 2 - having a parameter which is the amount that will be added to the Piggie Bank
-// Create an object of the 'AddAmount' class and display the final amount in the Piggie Bank.
+    // Q#16
+    // We want to calculate the total marks of each student of a class in Physics,Chemistry and Mathematics and the average marks of the class. The number of students in the class are entered by the user. Create a class named Marks with data members for roll number, name and marks. Create three other classes inheriting the Marks class, namely Physics, Chemistry and Mathematics, which are used to define marks in individual subject of each student. Roll number of each student will be generated automatically.
 
-// Q#18
-// Create a class to print an integer and a character using two functions having the same name but different sequence of the integer and the character parameters.
-// For example, if the parameters of the first function are of the form (int n, char c), then that of the second function will be of the form (char c, int n).
+    // Q#17
+    // Suppose you have a Piggie Bank with an initial amount of $50 and you have to add some more amount to it. Create a class 'AddAmount' with a data member named 'amount' with an initial value of $50. Now make two constructors of this class as follows:
+    // 1 - without any parameter - no amount will be added to the Piggie Bank
+    // 2 - having a parameter which is the amount that will be added to the Piggie Bank
+    // Create an object of the 'AddAmount' class and display the final amount in the Piggie Bank.
 
-// Q#19
-// Write a program to print the name, salary and date of joining of 10 employees in a company. Use array of objects.
-// Q#20
-// Create an array of characters and then print the address of each of the elements of the array. Take difference of two consecutive addresses and compare this with array of integers.
+    // Q#18
+    // Create a class to print an integer and a character using two functions having the same name but different sequence of the integer and the character parameters.
+    // For example, if the parameters of the first function are of the form (int n, char c), then that of the second function will be of the form (char c, int n).
+
+    // Q#19
+    // Write a program to print the name, salary and date of joining of 10 employees in a company. Use array of objects.
+    // Q#20
+    // Create an array of characters and then print the address of each of the elements of the array. Take difference of two consecutive addresses and compare this with array of integers.
