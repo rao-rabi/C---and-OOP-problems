@@ -424,6 +424,37 @@ int main()
 // Q#14
 // Write a program to print the Sum of the diagnals(both) of a Matrix, using 2D Array.
 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, sum=0;
+    cout << "Enter number of rows: " << endl;
+    cin >> a;
+    cout << "Enter number of coloumn: " << endl;
+    cin >> b;
+    cout << "Enter the values of array: " << endl;
+    int arr[a][b];
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            cin >> arr[i][j];
+        }
+    }
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            if (i == j)
+            {
+                sum = sum + arr[i][j];
+            }
+        }
+    }
+    cout << "sum of diagonals is: " << sum;
+}
+
 // Q#15
 // Print all Strong numbers(Strong number is a special number whose sum of the factorial of digits is equal to the original number) form 1 to 150.
 // eg. 145 is a strong number,(1!+5!+5!)=145
