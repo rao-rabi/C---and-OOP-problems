@@ -402,6 +402,25 @@ int main()
 // But for multiples of three print "Fizz" instead of the number,
 // and for the multiples of five print "Buzz".
 
+#include <iostream>
+using namespace std;
+int main()
+{
+    for (int i = 1; i < 101; i++)
+    {
+        if (i % 3 == 0)
+        {
+            cout << "fizz" << endl;
+        }
+        else if (i % 5 == 0)
+        {
+            cout << "Buzz" << endl;
+        }
+        else
+            cout << i <<endl;
+    }
+}
+
 // Q#14
 // Write a program to print the Sum of the diagnals(both) of a Matrix, using 2D Array.
 
