@@ -459,6 +459,33 @@ int main()
 // Print all Strong numbers(Strong number is a special number whose sum of the factorial of digits is equal to the original number) form 1 to 150.
 // eg. 145 is a strong number,(1!+5!+5!)=145
 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num, a, temp, sum = 0, f = 1;
+    cout << "Enter a number: ";
+    cin >> num;
+    temp = num;
+    while (num > 0)
+    {
+        a = num % 10;
+        for (int i = 1; i <= a; i++)
+        {
+            f = f * i;
+        }
+        sum = sum + f;
+        f = 1;
+        num = num / 10;
+    }
+    if (temp == sum)
+    {
+        cout << temp << " is a strong number" << endl;
+    }
+    else
+        cout << temp << " is not a strong number." << endl;
+}
+
 // Q#16
 // We want to calculate the total marks of each student of a class in Physics,Chemistry and Mathematics and the average marks of the class. The number of students in the class are entered by the user. Create a class named Marks with data members for roll number, name and marks. Create three other classes inheriting the Marks class, namely Physics, Chemistry and Mathematics, which are used to define marks in individual subject of each student. Roll number of each student will be generated automatically.
 
