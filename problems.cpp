@@ -175,7 +175,7 @@ int main()
     }
     else
     {
-        cout << "fasle";
+        cout << "false";
     }
 }
 
@@ -192,7 +192,7 @@ int main()
 using namespace std;
 int main()
 {
-    int rows, i, j, space;
+    int rows, i, j;
     cout << "Enter number of rows:" << endl;
     cin >> rows;
     for (int i = 1; i <= rows; i++)
